@@ -21,7 +21,11 @@ td_negative = [
     (Calendar(2017, 4, 0)),   # некорректный формат
     (Calendar(2017, 0, 13)),
     (Calendar(0, 5, 29)),
-    (Calendar(0, 0, 0))
+    (Calendar(0, 0, 0)),
+    (Calendar(2017, 4, None)),
+    (Calendar(2017, None, 13)),
+    (Calendar(None, 5, 29)),
+    (Calendar(None, None, None))
 ]
 
 
@@ -32,5 +36,5 @@ def test_positive_calendar(calendar):
 
 @pytest.mark.parametrize('calendar', td_negative)
 def test_negative_calendar(calendar):
-    with pytest.raises(ValueError):
+    with pytest.raises(Exception):
         datetime.date(calendar.get_year, calendar.get_month, calendar.get_day)

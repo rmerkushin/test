@@ -1,6 +1,6 @@
 class Calendar:
 
-    def __init__(self, year: int, month: int, day: int):
+    def __init__(self, year: int, month: int, day: int) -> None:
         self._year = year
         self._month = month
         self._day = day
@@ -16,3 +16,7 @@ class Calendar:
     @property
     def get_day(self) -> int:
         return self._day
+
+
+# Пример некорректного использования Calendar
+calendar = Calendar('2017', '06', '11')

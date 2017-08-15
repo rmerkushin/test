@@ -9,3 +9,4 @@
 __pycache__/
 .cache/
 .python-version
+.mypy_cache/
