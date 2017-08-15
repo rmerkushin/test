@@ -1,18 +1,18 @@
 class Calendar:
 
-    def __init__(self, year, month, day):
+    def __init__(self, year: int, month: int, day: int):
         self._year = year
         self._month = month
         self._day = day
 
     @property
-    def get_year(self):
+    def get_year(self) -> int:
         return self._year
 
     @property
-    def get_month(self):
+    def get_month(self) -> int:
         return self._month
 
     @property
-    def get_day(self):
+    def get_day(self) -> int:
         return self._day
