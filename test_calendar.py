@@ -21,12 +21,12 @@ td_negative = [
 ]
 
 
-@pytest.mark.parametrize('cl', td_positive)
-def test_positive_calendar(cl):
-    datetime.date(cl.get_year, cl.get_month, cl.get_day)
+@pytest.mark.parametrize('calendar', td_positive)
+def test_positive_calendar(calendar):
+    datetime.date(calendar.get_year, calendar.get_month, calendar.get_day)
 
 
-@pytest.mark.parametrize('cl', td_negative)
-def test_negative_calendar(cl):
+@pytest.mark.parametrize('calendar', td_negative)
+def test_negative_calendar(calendar):
     with pytest.raises(ValueError):
-        datetime.date(cl.get_year, cl.get_month, cl.get_day)
+        datetime.date(calendar.get_year, calendar.get_month, calendar.get_day)
