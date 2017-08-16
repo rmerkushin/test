@@ -7,3 +7,6 @@
 pip install -r requirements.txt
 ./run.sh
 ```
+
+# Другой вариант тестов
+Тесты в `test_another_variant.py` сделаны с применением библиотеки [pydantic](https://pydantic-docs.helpmanual.io/). Эти тесты отличаются от `class_under_test.py` тем, что позволяют тестировать класс `Calendar` заполненный практически любыми типами данных.
