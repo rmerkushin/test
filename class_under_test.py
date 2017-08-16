@@ -6,15 +6,15 @@ class Calendar:
         self._day = day
 
     @property
-    def get_year(self) -> int:
+    def year(self) -> int:
         return self._year
 
     @property
-    def get_month(self) -> int:
+    def month(self) -> int:
         return self._month
 
     @property
-    def get_day(self) -> int:
+    def day(self) -> int:
         return self._day
 
 

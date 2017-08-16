@@ -31,10 +31,10 @@ td_negative = [
 
 @pytest.mark.parametrize('calendar', td_positive)
 def test_positive_calendar(calendar):
-    datetime.date(calendar.get_year, calendar.get_month, calendar.get_day)
+    datetime.date(calendar.year, calendar.month, calendar.day)
 
 
 @pytest.mark.parametrize('calendar', td_negative)
 def test_negative_calendar(calendar):
     with pytest.raises(Exception):
-        datetime.date(calendar.get_year, calendar.get_month, calendar.get_day)
+        datetime.date(calendar.year, calendar.month, calendar.day)
